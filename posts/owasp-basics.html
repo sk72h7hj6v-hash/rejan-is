@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Notes | OWASP Basics</title>
+  <meta name="description" content="Simple OWASP basics for cybersecurity beginners.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="../index.html">Cyber Notes</a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a class="active" href="../blog.html">Blog</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section container article">
+    <p class="meta">Apr 2026 · Web Security · 7 min read</p>
+    <h1>OWASP Basics Explained in Simple Terms</h1>
+    <p class="lead">A practical introduction to high-impact web risks and the defenses teams should prioritize first.</p>
+    <p>
+      OWASP is a community project that helps teams prioritize common web application security risks.
+      It is useful for developers, analysts, and learners because it maps technical weaknesses to business impact.
+    </p>
+    <p>
+      For beginners, three topics provide strong early value: injection flaws, cross-site scripting,
+      and authentication/session misconfiguration. These appear frequently in real incidents.
+    </p>
+    <p>
+      Effective defense starts with simple engineering controls implemented consistently across all projects.
+      Secure defaults usually outperform complex controls applied inconsistently.
+    </p>
+    <h2>High-Value Defensive Controls</h2>
+    <ul>
+      <li>Validate and sanitize untrusted input on every boundary.</li>
+      <li>Use parameterized queries and prepared statements.</li>
+      <li>Encode output by context to reduce XSS risk.</li>
+      <li>Enforce strong authentication and secure session handling.</li>
+      <li>Log auth, permission, and sensitive data access events.</li>
+    </ul>
+    <h2>Learning Path</h2>
+    <ol>
+      <li>Study one vulnerability class at a time.</li>
+      <li>Exploit it safely in a training app.</li>
+      <li>Implement mitigation and verify the fix.</li>
+      <li>Document the root cause and prevention checklist.</li>
+    </ol>
+    <p><a href="../blog.html">Back to all posts</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Cyber Notes.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Notes | Home Security Lab</title>
+  <meta name="description" content="How I built my first home security lab.">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="../index.html">Cyber Notes</a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a class="active" href="../blog.html">Blog</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section container article">
+    <p class="meta">Apr 2026 · Labs · 8 min read</p>
+    <h1>How I Set Up My First Home Security Lab</h1>
+    <p class="lead">A practical foundation for testing safely, capturing evidence, and building repeatable security workflows.</p>
+    <p>
+      I started with a small architecture: one attacker simulation machine, one target machine, and one monitoring node.
+      All systems were connected on an internal virtual network with no direct bridge to production devices.
+    </p>
+    <p>
+      The first major improvement was centralizing logs. Even basic file-based logs, when collected consistently, help
+      connect suspicious activity to timeline events and improve incident reconstruction.
+    </p>
+    <p>
+      Packet captures were useful for validating assumptions. I compared normal traffic against test scenarios
+      to build an intuition for what "clean baseline behavior" actually looks like.
+    </p>
+    <h2>Starter Toolkit</h2>
+    <ul>
+      <li>Virtualization platform for system isolation.</li>
+      <li>Linux VM for monitoring and scripts.</li>
+      <li>Packet capture and basic log parsing tools.</li>
+      <li>A structured notes template for each experiment.</li>
+    </ul>
+    <h2>Key Lessons</h2>
+    <ul>
+      <li>Design for repeatability before adding complexity.</li>
+      <li>Track exact commands and timestamps for every test.</li>
+      <li>Keep strict boundaries between lab and personal devices.</li>
+    </ul>
+    <p><a href="../blog.html">Back to all posts</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Cyber Notes.</p>
+    </div>
+  </footer>
+</body>
+</html>
