@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Notes | Home</title>
+  <meta name="description" content="Cyber Notes shares cybersecurity writeups, lab notes, and simple security tips.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html">Cyber Notes</a>
+      <nav>
+        <a class="active" href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="badge">Independent Cybersecurity Publication</p>
+        <h1>Practical cybersecurity analysis, lab reports, and defensive playbooks</h1>
+        <p>
+          Cyber Notes documents real learning in web application security, threat detection,
+          SOC workflows, and secure engineering. Every article is written for practical execution,
+          not just theory.
+        </p>
+        <a class="button" href="blog.html">Explore Articles</a>
+        <a class="button alt" href="about.html">Editorial Mission</a>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <strong>3+</strong>
+            Featured technical writeups
+          </div>
+          <div class="stat-card">
+            <strong>4</strong>
+            Research tracks (Blue Team, Web AppSec, Labs, Learning)
+          </div>
+          <div class="stat-card">
+            <strong>100%</strong>
+            Beginner-accessible explanations with actionable steps
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2>Latest Research Notes</h2>
+      <div class="filter-toolbar">
+        <label class="search-wrap" for="note-search">Search Notes</label>
+        <input id="note-search" type="search" placeholder="Search labs, vulnerabilities, or keywords...">
+        <div class="filter-tags" aria-label="Filter notes by category">
+          <button class="filter-btn active" type="button" data-filter="all">All</button>
+          <button class="filter-btn" type="button" data-filter="blue-team">Blue Team</button>
+          <button class="filter-btn" type="button" data-filter="web-security">Web Security</button>
+          <button class="filter-btn" type="button" data-filter="labs">Labs</button>
+          <button class="filter-btn" type="button" data-filter="learning">Learning</button>
+        </div>
+      </div>
+      <p id="notes-result-count" class="results-info">Showing 3 notes</p>
+      <div class="post-grid">
+        <article class="post-card searchable-note" data-tags="labs blue-team" data-title="How I Set Up My First Home Security Lab" data-description="A professional baseline for home labs: segmented networking, isolated workloads, logging, and repeatable testing.">
+          <p class="meta">Apr 2026 · Labs · 8 min read</p>
+          <h3>How I Set Up My First Home Security Lab</h3>
+          <p>A professional baseline for home labs: segmented networking, isolated workloads, logging, and repeatable testing.</p>
+          <a href="posts/home-security-lab.html">Read post</a>
+        </article>
+        <article class="post-card searchable-note" data-tags="learning blue-team" data-title="Top 5 Beginner Mistakes in Cybersecurity" data-description="A strategic checklist to avoid common learning traps and accelerate progress with a structured study system.">
+          <p class="meta">Apr 2026 · Learning · 6 min read</p>
+          <h3>Top 5 Beginner Mistakes in Cybersecurity</h3>
+          <p>A strategic checklist to avoid common learning traps and accelerate progress with a structured study system.</p>
+          <a href="posts/beginner-mistakes.html">Read post</a>
+        </article>
+        <article class="post-card searchable-note" data-tags="web-security" data-title="OWASP Basics Explained in Simple Terms" data-description="Clear explanation of core OWASP risks with practical mitigations for developers and security trainees.">
+          <p class="meta">Apr 2026 · Web Security · 7 min read</p>
+          <h3>OWASP Basics Explained in Simple Terms</h3>
+          <p>Clear explanation of core OWASP risks with practical mitigations for developers and security trainees.</p>
+          <a href="posts/owasp-basics.html">Read post</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2>Coverage Areas</h2>
+      <div class="content-grid">
+        <article class="panel">
+          <h3>Blue Team Foundations</h3>
+          <p class="lead">How to detect, triage, and respond to suspicious behavior in small lab environments.</p>
+          <span class="tag">Log Analysis</span>
+          <span class="tag">Alert Triage</span>
+          <span class="tag">Incident Notes</span>
+        </article>
+        <article class="panel">
+          <h3>Web Application Security</h3>
+          <p class="lead">Simple vulnerability breakdowns mapped to developer-safe prevention techniques.</p>
+          <span class="tag">OWASP Top 10</span>
+          <span class="tag">Threat Modeling</span>
+          <span class="tag">Secure Coding</span>
+        </article>
+        <article class="panel">
+          <h3>Learning Systems</h3>
+          <p class="lead">Study plans, retention workflows, and tool-practice routines that prevent overwhelm.</p>
+          <span class="tag">Roadmaps</span>
+          <span class="tag">Lab Tracking</span>
+          <span class="tag">Career Prep</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2>Services and Collaboration</h2>
+      <p class="lead">
+        Cyber Notes also supports beginner-friendly security projects for students, creators, and small teams.
+      </p>
+      <div class="service-grid">
+        <article class="service-card">
+          <h3>Security Awareness Sessions</h3>
+          <p>
+            Practical training sessions on phishing defense, password hygiene, and secure browsing habits
+            for non-technical audiences.
+          </p>
+          <ul>
+            <li>Custom session outline</li>
+            <li>Simple threat examples</li>
+            <li>Action checklist for teams</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <h3>Home Lab Setup Guidance</h3>
+          <p>
+            Hands-on support to build a safe personal cybersecurity lab for learning detection,
+            hardening, and controlled testing.
+          </p>
+          <ul>
+            <li>VM architecture planning</li>
+            <li>Isolation and safety setup</li>
+            <li>Starter monitoring workflow</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <h3>Beginner Mentoring Roadmaps</h3>
+          <p>
+            Structured 4- to 8-week learning plans for newcomers preparing for SOC, AppSec,
+            or general cybersecurity fundamentals.
+          </p>
+          <ul>
+            <li>Weekly milestones</li>
+            <li>Skill gap analysis</li>
+            <li>Portfolio project ideas</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container cta-band">
+      <h2>Ready to Collaborate?</h2>
+      <p>
+        If you want support on beginner cybersecurity education, lab setup, or a custom awareness session,
+        let us discuss your goals.
+      </p>
+      <a class="button" href="contact.html">Book a Conversation</a>
+      <a class="button alt" href="blog.html">View Writing Samples</a>
+    </section>
+
+    <section class="section container newsletter-panel">
+      <h2>Get New Lab Reports by Email</h2>
+      <p class="lead">
+        Subscribe to receive updates when new research notes, vulnerability breakdowns, and lab writeups are published.
+      </p>
+      <form id="newsletter-form" class="newsletter-form">
+        <label for="newsletter-email">Email Address</label>
+        <div class="newsletter-row">
+          <input id="newsletter-email" type="email" placeholder="yourname@example.com" required>
+          <button type="submit" class="button">Subscribe</button>
+        </div>
+        <p id="newsletter-message" class="results-info" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Cyber Notes. Built with plain HTML and CSS.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
