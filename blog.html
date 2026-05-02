@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cyber Notes | Blog</title>
   <meta name="description" content="Browse all cybersecurity posts on Cyber Notes.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,6 +17,7 @@
         <a class="active" href="blog.html">Blog</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark and light mode">Light mode</button>
       </nav>
     </div>
   </header>
@@ -37,6 +39,55 @@
     </div>
 
     <div class="post-list">
+      <article class="post-card">
+        <p class="meta">May 2026 · Blue Team · 7 min read</p>
+        <h2>SIEM Alert Triage for Beginners</h2>
+        <p>A practical workflow for validating SIEM alerts, reducing noise, and documenting decisions clearly.</p>
+        <a href="posts/siem-alert-triage.html">Read post</a>
+      </article>
+
+      <article class="post-card">
+        <p class="meta">May 2026 · Labs · 9 min read</p>
+        <h2>Building a Phishing Simulation Lab Safely</h2>
+        <p>How to simulate phishing campaigns ethically in an isolated training environment without real-world impact.</p>
+        <a href="posts/phishing-simulation-lab.html">Read post</a>
+      </article>
+
+      <article class="post-card">
+        <p class="meta">May 2026 · Web Security · 6 min read</p>
+        <h2>XSS Testing Checklist for Small Projects</h2>
+        <p>A concise checklist to detect reflected and stored XSS issues before deployment.</p>
+        <a href="posts/xss-testing-checklist.html">Read post</a>
+      </article>
+
+      <article class="post-card">
+        <p class="meta">May 2026 · Learning · 8 min read</p>
+        <h2>30-Day SOC Analyst Study Plan</h2>
+        <p>A structured month-long path to build SOC fundamentals with daily labs and milestone reviews.</p>
+        <a href="posts/soc-study-plan-30-days.html">Read post</a>
+      </article>
+
+      <article class="post-card">
+        <p class="meta">May 2026 · Blue Team · 7 min read</p>
+        <h2>Windows Event Log Hunting Basics</h2>
+        <p>How to identify suspicious authentication activity and process anomalies from common Windows log sources.</p>
+        <a href="posts/windows-event-log-hunting.html">Read post</a>
+      </article>
+
+      <article class="post-card">
+        <p class="meta">May 2026 · Web Security · 7 min read</p>
+        <h2>SQL Injection Prevention in Plain Language</h2>
+        <p>Developer-friendly guidance on parameterized queries, validation boundaries, and secure defaults.</p>
+        <a href="posts/sql-injection-prevention.html">Read post</a>
+      </article>
+
+      <article class="post-card">
+        <p class="meta">May 2026 · Learning · 5 min read</p>
+        <h2>How to Write Better Cybersecurity Lab Notes</h2>
+        <p>A reusable note template that improves clarity, evidence capture, and portfolio value.</p>
+        <a href="posts/better-lab-notes.html">Read post</a>
+      </article>
+
       <article class="post-card">
         <p class="meta">Apr 2026 · Labs · 8 min read</p>
         <h2>How I Set Up My First Home Security Lab</h2>
@@ -72,8 +123,9 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2026 Cyber Notes.</p>
+      <p>&copy; 2026 Cyber Notes. <a href="https://github.com/guest1" target="_blank" rel="noopener noreferrer">GitHub</a></p>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

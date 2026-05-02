@@ -2,6 +2,7 @@ const searchInput = document.getElementById("note-search");
 const resultCount = document.getElementById("notes-result-count");
 const filterButtons = document.querySelectorAll(".filter-btn");
 const notes = document.querySelectorAll(".searchable-note");
+const themeToggle = document.getElementById("theme-toggle");
 
 let activeFilter = "all";
 
@@ -49,8 +50,9 @@ if (newsletterForm) {
   newsletterForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const emailValue = newsletterEmail?.value.trim() || "";
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!emailValue.includes("@") || !emailValue.includes(".")) {
+    if (!emailPattern.test(emailValue)) {
       if (newsletterMessage) {
         newsletterMessage.textContent = "Please enter a valid email address.";
       }
@@ -58,10 +60,35 @@ if (newsletterForm) {
     }
 
     if (newsletterMessage) {
-      newsletterMessage.textContent = "Thanks for subscribing! You will get updates when new reports are published.";
+      newsletterMessage.textContent = "Thanks! Your email app should open now so you can confirm subscription.";
     }
+    const subject = encodeURIComponent("Cyber Notes subscription request");
+    const body = encodeURIComponent(`Please add ${emailValue} to the Cyber Notes updates list.`);
+    window.location.href = `mailto:hello@cybernotes.dev?subject=${subject}&body=${body}`;
     newsletterForm.reset();
   });
+}
+
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "light" || savedTheme === "dark") {
+  document.documentElement.setAttribute("data-theme", savedTheme);
+}
+
+if (themeToggle) {
+  const updateThemeLabel = () => {
+    const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
+    themeToggle.textContent = currentTheme === "light" ? "Dark mode" : "Light mode";
+  };
+
+  themeToggle.addEventListener("click", () => {
+    const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
+    const nextTheme = currentTheme === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", nextTheme);
+    localStorage.setItem("theme", nextTheme);
+    updateThemeLabel();
+  });
+
+  updateThemeLabel();
 }
 
 updateVisibleNotes();
