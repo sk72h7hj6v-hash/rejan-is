@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Notes | XSS Testing Checklist</title>
+  <meta name="description" content="A simple XSS testing checklist for small web projects.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="../index.html">Cyber Notes</a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a class="active" href="../blog.html">Blog</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark and light mode">Light mode</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section container article">
+    <p class="meta">May 2026 · Web Security · 6 min read</p>
+    <h1>XSS Testing Checklist for Small Projects</h1>
+    <p class="lead">A lightweight checklist to catch common cross-site scripting weaknesses early.</p>
+    <p>
+      XSS often appears in comment fields, profile pages, search parameters, and admin dashboards.
+      Many cases come from one missing output encoding step.
+    </p>
+    <h2>Quick Test Areas</h2>
+    <ul>
+      <li>User-generated text rendered in HTML templates.</li>
+      <li>URL parameters reflected into page content.</li>
+      <li>DOM updates using unsafe JavaScript sinks like <code>innerHTML</code>.</li>
+      <li>Third-party widgets that inject untrusted markup.</li>
+    </ul>
+    <h2>Prevention Defaults</h2>
+    <ol>
+      <li>Encode output by context (HTML, attribute, JavaScript, URL).</li>
+      <li>Sanitize rich text input with allowlists.</li>
+      <li>Use Content Security Policy as a second line of defense.</li>
+      <li>Avoid inline scripts when possible.</li>
+    </ol>
+    <p><a href="../blog.html">Back to all posts</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Cyber Notes. <a href="https://github.com/guest1" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

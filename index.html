@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cyber Notes | Home</title>
   <meta name="description" content="Cyber Notes shares cybersecurity writeups, lab notes, and simple security tips.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,6 +17,7 @@
         <a href="blog.html">Blog</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark and light mode">Light mode</button>
       </nav>
     </div>
   </header>
@@ -35,7 +37,7 @@
 
         <div class="stats-grid">
           <div class="stat-card">
-            <strong>3+</strong>
+            <strong>10+</strong>
             Featured technical writeups
           </div>
           <div class="stat-card">
@@ -63,8 +65,50 @@
           <button class="filter-btn" type="button" data-filter="learning">Learning</button>
         </div>
       </div>
-      <p id="notes-result-count" class="results-info">Showing 3 notes</p>
+      <p id="notes-result-count" class="results-info">Showing 10 notes</p>
       <div class="post-grid">
+        <article class="post-card searchable-note" data-tags="blue-team" data-title="SIEM Alert Triage for Beginners" data-description="A practical workflow for validating SIEM alerts, reducing noise, and documenting decisions clearly.">
+          <p class="meta">May 2026 · Blue Team · 7 min read</p>
+          <h3>SIEM Alert Triage for Beginners</h3>
+          <p>A practical workflow for validating SIEM alerts, reducing noise, and documenting decisions clearly.</p>
+          <a href="posts/siem-alert-triage.html">Read post</a>
+        </article>
+        <article class="post-card searchable-note" data-tags="labs" data-title="Building a Phishing Simulation Lab Safely" data-description="How to simulate phishing campaigns ethically in an isolated training environment without real-world impact.">
+          <p class="meta">May 2026 · Labs · 9 min read</p>
+          <h3>Building a Phishing Simulation Lab Safely</h3>
+          <p>How to simulate phishing campaigns ethically in an isolated training environment without real-world impact.</p>
+          <a href="posts/phishing-simulation-lab.html">Read post</a>
+        </article>
+        <article class="post-card searchable-note" data-tags="web-security" data-title="XSS Testing Checklist for Small Projects" data-description="A concise checklist to detect reflected and stored XSS issues before deployment.">
+          <p class="meta">May 2026 · Web Security · 6 min read</p>
+          <h3>XSS Testing Checklist for Small Projects</h3>
+          <p>A concise checklist to detect reflected and stored XSS issues before deployment.</p>
+          <a href="posts/xss-testing-checklist.html">Read post</a>
+        </article>
+        <article class="post-card searchable-note" data-tags="learning" data-title="30-Day SOC Analyst Study Plan" data-description="A structured month-long path to build SOC fundamentals with daily labs and milestone reviews.">
+          <p class="meta">May 2026 · Learning · 8 min read</p>
+          <h3>30-Day SOC Analyst Study Plan</h3>
+          <p>A structured month-long path to build SOC fundamentals with daily labs and milestone reviews.</p>
+          <a href="posts/soc-study-plan-30-days.html">Read post</a>
+        </article>
+        <article class="post-card searchable-note" data-tags="blue-team labs" data-title="Windows Event Log Hunting Basics" data-description="How to identify suspicious authentication activity and process anomalies from common Windows log sources.">
+          <p class="meta">May 2026 · Blue Team · 7 min read</p>
+          <h3>Windows Event Log Hunting Basics</h3>
+          <p>How to identify suspicious authentication activity and process anomalies from common Windows log sources.</p>
+          <a href="posts/windows-event-log-hunting.html">Read post</a>
+        </article>
+        <article class="post-card searchable-note" data-tags="web-security learning" data-title="SQL Injection Prevention in Plain Language" data-description="Developer-friendly guidance on parameterized queries, validation boundaries, and secure defaults.">
+          <p class="meta">May 2026 · Web Security · 7 min read</p>
+          <h3>SQL Injection Prevention in Plain Language</h3>
+          <p>Developer-friendly guidance on parameterized queries, validation boundaries, and secure defaults.</p>
+          <a href="posts/sql-injection-prevention.html">Read post</a>
+        </article>
+        <article class="post-card searchable-note" data-tags="learning" data-title="How to Write Better Cybersecurity Lab Notes" data-description="A reusable note template that improves clarity, evidence capture, and portfolio value.">
+          <p class="meta">May 2026 · Learning · 5 min read</p>
+          <h3>How to Write Better Cybersecurity Lab Notes</h3>
+          <p>A reusable note template that improves clarity, evidence capture, and portfolio value.</p>
+          <a href="posts/better-lab-notes.html">Read post</a>
+        </article>
         <article class="post-card searchable-note" data-tags="labs blue-team" data-title="How I Set Up My First Home Security Lab" data-description="A professional baseline for home labs: segmented networking, isolated workloads, logging, and repeatable testing.">
           <p class="meta">Apr 2026 · Labs · 8 min read</p>
           <h3>How I Set Up My First Home Security Lab</h3>
@@ -186,7 +230,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2026 Cyber Notes. Built with plain HTML and CSS.</p>
+      <p>&copy; 2026 Cyber Notes. Built with plain HTML and CSS. <a href="https://github.com/guest1" target="_blank" rel="noopener noreferrer">GitHub</a></p>
     </div>
   </footer>
   <script src="script.js"></script>
