@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Notes | Phishing Simulation Lab</title>
+  <meta name="description" content="How to run phishing simulations safely in a lab.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="../index.html">Cyber Notes</a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a class="active" href="../blog.html">Blog</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark and light mode">Light mode</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section container article">
+    <p class="meta">May 2026 · Labs · 9 min read</p>
+    <h1>Building a Phishing Simulation Lab Safely</h1>
+    <p class="lead">A legal and controlled way to practice phishing detection and response workflows.</p>
+    <p>
+      Phishing labs are valuable for awareness training and detection tuning, but they require strict boundaries.
+      Every account, mailbox, and endpoint must be isolated from real production systems.
+    </p>
+    <p>
+      Use synthetic domains and internal DNS rules so simulations never target external users.
+      This keeps your tests realistic while preventing accidental abuse.
+    </p>
+    <h2>Safe Design Principles</h2>
+    <ul>
+      <li>Isolated network segment with no public routing.</li>
+      <li>Dedicated test identities and disposable inboxes.</li>
+      <li>Clear banner labels showing simulation content.</li>
+      <li>Automatic teardown after each campaign test.</li>
+    </ul>
+    <h2>What to Measure</h2>
+    <ol>
+      <li>Time to detect suspicious message behavior.</li>
+      <li>Time to quarantine and contain.</li>
+      <li>Quality of analyst notes and escalation.</li>
+      <li>Repeat attacker techniques that bypass current filters.</li>
+    </ol>
+    <p><a href="../blog.html">Back to all posts</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Cyber Notes. <a href="https://github.com/guest1" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>
