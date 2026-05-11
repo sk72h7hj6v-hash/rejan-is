@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Notes | SQL Injection Prevention</title>
+  <meta name="description" content="Simple SQL injection prevention principles for developers.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="../index.html">Cyber Notes</a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a class="active" href="../blog.html">Blog</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark and light mode">Light mode</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section container article">
+    <p class="meta">May 2026 · Web Security · 7 min read</p>
+    <h1>SQL Injection Prevention in Plain Language</h1>
+    <p class="lead">Clear, practical rules to remove SQL injection risk from everyday development workflows.</p>
+    <p>
+      SQL injection happens when untrusted input is treated as executable query logic.
+      The safest fix is not better filtering alone. It is strict separation of data and commands.
+    </p>
+    <h2>Core Defenses</h2>
+    <ul>
+      <li>Use prepared statements and parameterized queries everywhere.</li>
+      <li>Apply server-side input validation for expected formats.</li>
+      <li>Use least-privilege database accounts for each application component.</li>
+      <li>Log query errors and suspicious request patterns safely.</li>
+    </ul>
+    <h2>Code Review Checklist</h2>
+    <ol>
+      <li>Search for string-built SQL queries.</li>
+      <li>Verify ORM raw-query usage includes bound parameters.</li>
+      <li>Check admin endpoints for weak validation assumptions.</li>
+      <li>Confirm database user permissions are narrowly scoped.</li>
+    </ol>
+    <p><a href="../blog.html">Back to all posts</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Rejan Isufi. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

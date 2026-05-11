@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Notes | SIEM Alert Triage</title>
+  <meta name="description" content="A beginner-friendly SIEM alert triage workflow.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="../index.html">Cyber Notes</a>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a class="active" href="../blog.html">Blog</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark and light mode">Light mode</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section container article">
+    <p class="meta">May 2026 · Blue Team · 7 min read</p>
+    <h1>SIEM Alert Triage for Beginners</h1>
+    <p class="lead">A practical method for reducing false positives while keeping real threats visible.</p>
+    <p>
+      Early in SIEM work, the main challenge is not tooling. It is making clear decisions fast.
+      Triage starts by validating data quality, alert context, and business relevance before escalating.
+    </p>
+    <p>
+      I group every alert into three buckets: expected behavior, suspicious but low impact, and high-confidence risk.
+      This structure keeps investigations focused and helps avoid alert fatigue.
+    </p>
+    <h2>Baseline Triage Steps</h2>
+    <ol>
+      <li>Confirm timestamp, host identity, and user context.</li>
+      <li>Check whether the behavior matches approved admin or automation activity.</li>
+      <li>Correlate with endpoint and authentication logs.</li>
+      <li>Assign severity based on impact and confidence.</li>
+      <li>Document action taken and evidence used.</li>
+    </ol>
+    <h2>Common Pitfalls</h2>
+    <ul>
+      <li>Escalating without verifying logging reliability.</li>
+      <li>Ignoring repeat patterns that indicate noisy detection logic.</li>
+      <li>Failing to capture why an alert was closed.</li>
+    </ul>
+    <p><a href="../blog.html">Back to all posts</a></p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Rejan Isufi. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>
