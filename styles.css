@@ -301,10 +301,14 @@ h3 {
   gap: 0.5rem;
   min-height: 8rem;
   transition: border-color 0.15s ease;
+  text-decoration: none;
+  color: inherit;
 }
 
-.searchable-note:hover {
+a.searchable-note:hover {
   border-color: var(--accent);
+  text-decoration: none;
+  color: inherit;
 }
 
 .searchable-note h3 {
@@ -319,9 +323,16 @@ h3 {
   flex: 1;
 }
 
-.searchable-note a {
+.searchable-note .read-more {
   font-weight: 600;
   font-size: 0.92rem;
+  color: var(--accent);
+  margin-top: auto;
+}
+
+a.searchable-note:hover .read-more {
+  text-decoration: underline;
+  color: var(--accent-dim);
 }
 
 .post-list {

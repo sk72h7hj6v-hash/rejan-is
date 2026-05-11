@@ -11,11 +11,20 @@ function updateVisibleNotes() {
   let visibleCount = 0;
 
   notes.forEach((note) => {
-    const tags = note.dataset.tags || "";
+    const tagList = (note.dataset.tags || "")
+      .split(/\s+/)
+      .map((t) => t.trim())
+      .filter(Boolean);
+    const tagsBlob = tagList.join(" ").toLowerCase();
     const title = (note.dataset.title || "").toLowerCase();
     const description = (note.dataset.description || "").toLowerCase();
-    const inCategory = activeFilter === "all" || tags.includes(activeFilter);
-    const inSearch = !query || title.includes(query) || description.includes(query) || tags.includes(query);
+    const inCategory = activeFilter === "all" || tagList.includes(activeFilter);
+    const inSearch =
+      !query ||
+      title.includes(query) ||
+      description.includes(query) ||
+      tagsBlob.includes(query) ||
+      tagList.some((t) => t.toLowerCase().includes(query));
     const isVisible = inCategory && inSearch;
 
     note.style.display = isVisible ? "" : "none";
