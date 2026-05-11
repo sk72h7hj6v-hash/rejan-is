@@ -1,238 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cyber Notes | Home</title>
-  <meta name="description" content="Cyber Notes shares cybersecurity writeups, lab notes, and simple security tips.">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="logo" href="index.html">Cyber Notes</a>
-      <nav>
-        <a class="active" href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark and light mode">Light mode</button>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="container">
-        <p class="badge">Independent Cybersecurity Publication</p>
-        <h1>Practical cybersecurity analysis, lab reports, and defensive playbooks</h1>
-        <p>
-          Cyber Notes documents real learning in web application security, threat detection,
-          SOC workflows, and secure engineering. Every article is written for practical execution,
-          not just theory.
-        </p>
-        <a class="button" href="blog.html">Explore Articles</a>
-        <a class="button alt" href="about.html">Editorial Mission</a>
-
-        <div class="stats-grid">
-          <div class="stat-card">
-            <strong>10+</strong>
-            Featured technical writeups
-          </div>
-          <div class="stat-card">
-            <strong>4</strong>
-            Research tracks (Blue Team, Web AppSec, Labs, Learning)
-          </div>
-          <div class="stat-card">
-            <strong>100%</strong>
-            Beginner-accessible explanations with actionable steps
-          </div>
-        </div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rejan Isufi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="logo" href="index.html">Rejan Isufi</a>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
-
-    <section class="section container">
-      <h2>Latest Research Notes</h2>
-      <div class="filter-toolbar">
-        <label class="search-wrap" for="note-search">Search Notes</label>
-        <input id="note-search" type="search" placeholder="Search labs, vulnerabilities, or keywords...">
-        <div class="filter-tags" aria-label="Filter notes by category">
-          <button class="filter-btn active" type="button" data-filter="all">All</button>
-          <button class="filter-btn" type="button" data-filter="blue-team">Blue Team</button>
-          <button class="filter-btn" type="button" data-filter="web-security">Web Security</button>
-          <button class="filter-btn" type="button" data-filter="labs">Labs</button>
-          <button class="filter-btn" type="button" data-filter="learning">Learning</button>
-        </div>
-      </div>
-      <p id="notes-result-count" class="results-info">Showing 10 notes</p>
-      <div class="post-grid">
-        <article class="post-card searchable-note" data-tags="blue-team" data-title="SIEM Alert Triage for Beginners" data-description="A practical workflow for validating SIEM alerts, reducing noise, and documenting decisions clearly.">
-          <p class="meta">May 2026 · Blue Team · 7 min read</p>
-          <h3>SIEM Alert Triage for Beginners</h3>
-          <p>A practical workflow for validating SIEM alerts, reducing noise, and documenting decisions clearly.</p>
-          <a href="posts/siem-alert-triage.html">Read post</a>
-        </article>
-        <article class="post-card searchable-note" data-tags="labs" data-title="Building a Phishing Simulation Lab Safely" data-description="How to simulate phishing campaigns ethically in an isolated training environment without real-world impact.">
-          <p class="meta">May 2026 · Labs · 9 min read</p>
-          <h3>Building a Phishing Simulation Lab Safely</h3>
-          <p>How to simulate phishing campaigns ethically in an isolated training environment without real-world impact.</p>
-          <a href="posts/phishing-simulation-lab.html">Read post</a>
-        </article>
-        <article class="post-card searchable-note" data-tags="web-security" data-title="XSS Testing Checklist for Small Projects" data-description="A concise checklist to detect reflected and stored XSS issues before deployment.">
-          <p class="meta">May 2026 · Web Security · 6 min read</p>
-          <h3>XSS Testing Checklist for Small Projects</h3>
-          <p>A concise checklist to detect reflected and stored XSS issues before deployment.</p>
-          <a href="posts/xss-testing-checklist.html">Read post</a>
-        </article>
-        <article class="post-card searchable-note" data-tags="learning" data-title="30-Day SOC Analyst Study Plan" data-description="A structured month-long path to build SOC fundamentals with daily labs and milestone reviews.">
-          <p class="meta">May 2026 · Learning · 8 min read</p>
-          <h3>30-Day SOC Analyst Study Plan</h3>
-          <p>A structured month-long path to build SOC fundamentals with daily labs and milestone reviews.</p>
-          <a href="posts/soc-study-plan-30-days.html">Read post</a>
-        </article>
-        <article class="post-card searchable-note" data-tags="blue-team labs" data-title="Windows Event Log Hunting Basics" data-description="How to identify suspicious authentication activity and process anomalies from common Windows log sources.">
-          <p class="meta">May 2026 · Blue Team · 7 min read</p>
-          <h3>Windows Event Log Hunting Basics</h3>
-          <p>How to identify suspicious authentication activity and process anomalies from common Windows log sources.</p>
-          <a href="posts/windows-event-log-hunting.html">Read post</a>
-        </article>
-        <article class="post-card searchable-note" data-tags="web-security learning" data-title="SQL Injection Prevention in Plain Language" data-description="Developer-friendly guidance on parameterized queries, validation boundaries, and secure defaults.">
-          <p class="meta">May 2026 · Web Security · 7 min read</p>
-          <h3>SQL Injection Prevention in Plain Language</h3>
-          <p>Developer-friendly guidance on parameterized queries, validation boundaries, and secure defaults.</p>
-          <a href="posts/sql-injection-prevention.html">Read post</a>
-        </article>
-        <article class="post-card searchable-note" data-tags="learning" data-title="How to Write Better Cybersecurity Lab Notes" data-description="A reusable note template that improves clarity, evidence capture, and portfolio value.">
-          <p class="meta">May 2026 · Learning · 5 min read</p>
-          <h3>How to Write Better Cybersecurity Lab Notes</h3>
-          <p>A reusable note template that improves clarity, evidence capture, and portfolio value.</p>
-          <a href="posts/better-lab-notes.html">Read post</a>
-        </article>
-        <article class="post-card searchable-note" data-tags="labs blue-team" data-title="How I Set Up My First Home Security Lab" data-description="A professional baseline for home labs: segmented networking, isolated workloads, logging, and repeatable testing.">
-          <p class="meta">Apr 2026 · Labs · 8 min read</p>
-          <h3>How I Set Up My First Home Security Lab</h3>
-          <p>A professional baseline for home labs: segmented networking, isolated workloads, logging, and repeatable testing.</p>
-          <a href="posts/home-security-lab.html">Read post</a>
-        </article>
-        <article class="post-card searchable-note" data-tags="learning blue-team" data-title="Top 5 Beginner Mistakes in Cybersecurity" data-description="A strategic checklist to avoid common learning traps and accelerate progress with a structured study system.">
-          <p class="meta">Apr 2026 · Learning · 6 min read</p>
-          <h3>Top 5 Beginner Mistakes in Cybersecurity</h3>
-          <p>A strategic checklist to avoid common learning traps and accelerate progress with a structured study system.</p>
-          <a href="posts/beginner-mistakes.html">Read post</a>
-        </article>
-        <article class="post-card searchable-note" data-tags="web-security" data-title="OWASP Basics Explained in Simple Terms" data-description="Clear explanation of core OWASP risks with practical mitigations for developers and security trainees.">
-          <p class="meta">Apr 2026 · Web Security · 7 min read</p>
-          <h3>OWASP Basics Explained in Simple Terms</h3>
-          <p>Clear explanation of core OWASP risks with practical mitigations for developers and security trainees.</p>
-          <a href="posts/owasp-basics.html">Read post</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section container">
-      <h2>Coverage Areas</h2>
-      <div class="content-grid">
-        <article class="panel">
-          <h3>Blue Team Foundations</h3>
-          <p class="lead">How to detect, triage, and respond to suspicious behavior in small lab environments.</p>
-          <span class="tag">Log Analysis</span>
-          <span class="tag">Alert Triage</span>
-          <span class="tag">Incident Notes</span>
-        </article>
-        <article class="panel">
-          <h3>Web Application Security</h3>
-          <p class="lead">Simple vulnerability breakdowns mapped to developer-safe prevention techniques.</p>
-          <span class="tag">OWASP Top 10</span>
-          <span class="tag">Threat Modeling</span>
-          <span class="tag">Secure Coding</span>
-        </article>
-        <article class="panel">
-          <h3>Learning Systems</h3>
-          <p class="lead">Study plans, retention workflows, and tool-practice routines that prevent overwhelm.</p>
-          <span class="tag">Roadmaps</span>
-          <span class="tag">Lab Tracking</span>
-          <span class="tag">Career Prep</span>
-        </article>
-      </div>
-    </section>
-
-    <section class="section container">
-      <h2>Services and Collaboration</h2>
+    </header>
+    <main id="main">
+      <h1>Hello, I’m Rejan.</h1>
       <p class="lead">
-        Cyber Notes also supports beginner-friendly security projects for students, creators, and small teams.
+        This site is part of a school project: a simple, hand-coded place to introduce myself and
+        share how I’m building skills in web fundamentals and communication.
       </p>
-      <div class="service-grid">
-        <article class="service-card">
-          <h3>Security Awareness Sessions</h3>
-          <p>
-            Practical training sessions on phishing defense, password hygiene, and secure browsing habits
-            for non-technical audiences.
-          </p>
-          <ul>
-            <li>Custom session outline</li>
-            <li>Simple threat examples</li>
-            <li>Action checklist for teams</li>
-          </ul>
-        </article>
-        <article class="service-card">
-          <h3>Home Lab Setup Guidance</h3>
-          <p>
-            Hands-on support to build a safe personal cybersecurity lab for learning detection,
-            hardening, and controlled testing.
-          </p>
-          <ul>
-            <li>VM architecture planning</li>
-            <li>Isolation and safety setup</li>
-            <li>Starter monitoring workflow</li>
-          </ul>
-        </article>
-        <article class="service-card">
-          <h3>Beginner Mentoring Roadmaps</h3>
-          <p>
-            Structured 4- to 8-week learning plans for newcomers preparing for SOC, AppSec,
-            or general cybersecurity fundamentals.
-          </p>
-          <ul>
-            <li>Weekly milestones</li>
-            <li>Skill gap analysis</li>
-            <li>Portfolio project ideas</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section container cta-band">
-      <h2>Ready to Collaborate?</h2>
       <p>
-        If you want support on beginner cybersecurity education, lab setup, or a custom awareness session,
-        let us discuss your goals.
+        If you’re here to learn more about my background and what I’m working toward, start with
+        the About page. You can also connect with me on LinkedIn.
       </p>
-      <a class="button" href="contact.html">Book a Conversation</a>
-      <a class="button alt" href="blog.html">View Writing Samples</a>
-    </section>
-
-    <section class="section container newsletter-panel">
-      <h2>Get New Lab Reports by Email</h2>
-      <p class="lead">
-        Subscribe to receive updates when new research notes, vulnerability breakdowns, and lab writeups are published.
-      </p>
-      <form id="newsletter-form" class="newsletter-form">
-        <label for="newsletter-email">Email Address</label>
-        <div class="newsletter-row">
-          <input id="newsletter-email" type="email" placeholder="yourname@example.com" required>
-          <button type="submit" class="button">Subscribe</button>
-        </div>
-        <p id="newsletter-message" class="results-info" aria-live="polite"></p>
-      </form>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 Cyber Notes. Built with plain HTML and CSS. <a href="https://sk72h7hj6v-hash.github.io/rejan-is/" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-    </div>
-  </footer>
-  <script src="script.js"></script>
-</body>
+      <div class="social-row">
+        <a
+          class="btn btn-primary"
+          href="https://www.linkedin.com/in/rejan-isufi-aba9b03b2"
+          rel="noopener noreferrer"
+          target="_blank"
+          >LinkedIn profile</a
+        >
+        <a class="btn" href="about.html">About me</a>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <p>© 2026 Rejan Isufi. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
